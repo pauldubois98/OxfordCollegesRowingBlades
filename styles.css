@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h1{
+}
+.blade{
+    width: 10em;
+    border: white 2px solid;
+}
+.demo{
+    margin: 0.75em;
+    margin-bottom: 1em;
+}
+.btn{
+    border-radius: 0.5em;
+    border: black 2px solid;
+    padding: 0.5em;
+    font-size: 1.25em;
+    color: black;
+    text-decoration: none;
+    margin: 0.75em;
+}
