@@ -23,14 +23,13 @@ function shuffleArray(array) {
 }
 function init(){
     // colleges blades names & filename
-    colleges = [
-        "Balliol", "Lady Margaret Hall", "Pembroke", "St. Hugh's", "Balliol 1st VIII", "Linacre", "Queens", "St. John's", "Brasenose",
-        "Lincoln", "Regent's Park", "St. Peter's", "Christ Church", "Lincoln 1st VIII", "Somerville", "Corpus Christi",
-        "Magdalen", "St. Anne's", "Trinity", "Exeter", "Mansfield", "St. Antony's", "University", "Green Templeton", "Merton",
-        "St. Benet's Hall", "Wadham", "Hertford", "New College", "St. Caterine's", "Wolfson", "Hertford M1", "Oriel", "St. Caterine's M1",
-        "Wolfson M2", "Hertford W1", "Oriel M1", "St. Caterine's W1", "Worcester Men", "Jesus", "Oriel W1", "St. Edmond Hall", 
-        "Worcester Women", "Keble", "Osler", "St. Hilda's", "St. Peters Bis", 
-    ];
+    colleges = ['Balliol', 'Balliol 1st VIII', 'Brasenose', 'Christ Church', 'Corpus Christi', 'Exeter', 'Green Templeton', 
+    'Hertford', 'Hertford M1', 'Hertford W1', 'Jesus', 'Keble', 'Lady Margaret Hall', 'Linacre', 'Lincoln', 
+    'Lincoln 1st VIII', 'Magdalen', 'Mansfield', 'Merton', 'New College', 'Oriel', 'Oriel M1', 'Oriel W1', 
+    'Osler', 'Pembroke', 'Queens', "Regent's Park", 'Somerville', "St. Anne's", "St. Antony's", "St. Benet's Hall", 
+    "St. Caterine's", "St. Caterine's M1", "St. Caterine's W1", 'St. Edmond Hall', "St. Hilda's", "St. Hugh's", 
+    "St. John's", "St. Peter's", 'St. Peters Bis', 'Trinity', 'University', 'Wadham', 'Wolfson', 'Wolfson M2', 
+    'Worcester Men', 'Worcester Women'];
     // randomize images order
     shuffleArray(colleges);
     var s=""
@@ -38,7 +37,6 @@ function init(){
         s+='<img src="CollegeBlades/'+fileName(colleges[i])+'.png" class="blade">';
     }
     document.getElementById("blades").innerHTML = s;
-    document.getElementById("give_up").addEventListener("click", giveUp);
 
     // global variables
     blades = document.getElementById("blades").children;
@@ -78,6 +76,7 @@ function init(){
 
     //draw first
     drawCollege();
+    document.getElementById("give_up").addEventListener("click", giveUp);
 }
 
 
@@ -115,14 +114,14 @@ function giveUp(){
         if(selected==fileName(college.innerText)){
             element.style.borderColor = "black";
             element.scrollIntoView();
+            const index = colleges.indexOf(college.innerText);
+            colleges.splice(index, 1);
+            solutions += 1;
         }
         else{
             element.style.borderColor = "white";
         }
     }
-    const index = colleges.indexOf(college.innerText);
-    colleges.splice(index, 1);
-    solutions += 1;
     setTimeout(drawCollege, 1000);
 }
 function playAgain(){
