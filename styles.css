@@ -11,6 +11,12 @@ h1{
     font-size: 1.3em;
     font-weight: 900;
 }
+#blades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1em;
+}
 .blade{
     width: 10em;
     border: white 0.2em solid;
