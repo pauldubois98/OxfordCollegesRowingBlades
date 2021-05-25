@@ -114,6 +114,7 @@ function giveUp(){
         var selected = element.getAttribute("src").split('/')[1].split('.')[0]
         if(selected==fileName(college.innerText)){
             element.style.borderColor = "black";
+            element.scrollIntoView();
         }
         else{
             element.style.borderColor = "white";
