@@ -3,6 +3,10 @@ body{
     flex-direction: column;
     align-items: center;
 }
+ul{
+    padding: 0;
+    width: 10em;
+}
 h1{
     font-weight: 100;
 }
@@ -21,6 +25,28 @@ h1{
     width: 10em;
     border: white 0.2em solid;
     border-radius: 0.5em;
+}
+.blade:hover{
+    /*border: lightgray 0.2em solid !important;*/
+    filter: brightness(92.5%);
+}
+.college{
+    border: white 0.2em solid;
+    border-radius: 0.5em;
+    font-size: 1.05em;
+    padding: 0.1em;
+
+    list-style-type: none; /* Remove bullets */
+
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+.college:hover{
+    /*border: lightgray 0.2em solid !important;*/
+    color: dimgray;
 }
 .demo{
     margin: 0.75em;
