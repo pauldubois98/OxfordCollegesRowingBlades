@@ -11,7 +11,7 @@ var start;
 var end;
 
 function fileName(collegeName){
-    return collegeName.replace(' ','').replace(' ','').replace('.','').replace("'","")
+    return collegeName.replace(' ','').replace(' ','').replace('.','').replace("'","");
 }
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -30,14 +30,15 @@ function init(){
         "St. Benet's Hall", "Wadham", "Hertford", "New College", "St. Caterine's", "Wolfson", "Hertford M1", "Oriel", "St. Caterine's M1",
         "Wolfson M2", "Hertford W1", "Oriel M1", "St. Caterine's W1", "Worcester Men", "Jesus", "Oriel W1", "St. Edmond Hall", 
         "Worcester Women", "Keble", "Osler", "St. Hilda's", "St. Peters Bis", 
-    ]
+    ];
     // randomize images order
-    shuffleArray(colleges)
+    shuffleArray(colleges);
     var s=""
     for (var i=0; i < colleges.length; i++) {
-        s+='<img src="CollegeBlades/'+fileName(colleges[i])+'.png" class="blade">'
+        s+='<img src="CollegeBlades/'+fileName(colleges[i])+'.png" class="blade">';
     }
     document.getElementById("blades").innerHTML = s;
+    document.getElementById("give_up").addEventListener("click", giveUp);
 
     // global variables
     blades = document.getElementById("blades").children;
@@ -64,7 +65,7 @@ function init(){
                     const index = colleges.indexOf(college.innerText);
                     colleges.splice(index, 1);
                 }
-                setTimeout(drawCollege, 1000)
+                setTimeout(drawCollege, 1000);
             }
             else{
                 //console.log('wrong')
@@ -76,7 +77,7 @@ function init(){
     }
 
     //draw first
-    drawCollege()
+    drawCollege();
 }
 
 
@@ -86,7 +87,6 @@ function drawCollege(){
     noFrame()
     if(colleges.length===0){
         if(time===0){
-            //window.location.replace("index.html");
             end = Date.now();
             time = end-start;
             document.getElementById("results_total").textContent = "Total Colleges Blades: 47";
@@ -122,8 +122,14 @@ function giveUp(){
     const index = colleges.indexOf(college.innerText);
     colleges.splice(index, 1);
     solutions += 1;
-    setTimeout(drawCollege, 1000)
+    setTimeout(drawCollege, 1000);
 }
-
+function playAgain(){
+    document.getElementById("results").style.display = "none";
+    init();
+}
+function backToMenu(){
+    window.location.replace("index.html");
+}
 //init
-init()
+init();

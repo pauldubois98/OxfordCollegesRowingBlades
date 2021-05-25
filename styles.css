@@ -36,6 +36,19 @@ h1{
     margin: 0.75em;
     font-weight: 900;
 }
+.small{
+    font-size: 0.9em;
+    padding: 0.1em;
+    margin: 0.1em;
+}
+.light{
+    color: rgb(170, 170, 170);
+    border-color: rgb(170, 170, 170);
+}
+.dark{
+    color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+}
 
 h2{
     color: dimgrey;
@@ -47,8 +60,8 @@ h2{
     background: white;
     position: absolute;
     margin: auto;
-    width: 15em;
-    height: 12.5em;
+    width: 17.5em;
+    height: 15em;
     top: 15em;
     border-radius: 2em;
     border: gray 0.2em solid;
