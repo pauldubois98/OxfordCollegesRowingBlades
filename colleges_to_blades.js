@@ -59,7 +59,7 @@ function init(){
             if(selected==fileName(college.innerText)){
                 //console.log('right')
                 e.target.style.borderColor = "green";
-                if(tries===0){
+                if(tries===0 || true){
                     const index = colleges.indexOf(college.innerText);
                     colleges.splice(index, 1);
                 }

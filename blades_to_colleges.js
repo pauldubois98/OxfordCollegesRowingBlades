@@ -53,7 +53,7 @@ function init(){
             if(fileName(selected)==blade.getAttribute("src").split('/')[1].split('.')[0]){
                 //console.log('right')
                 e.target.style.borderColor = "green";
-                if(tries===0){
+                if(tries===0 || true){
                     const index = colleges.indexOf(selected);
                     colleges.splice(index, 1);
                 }
