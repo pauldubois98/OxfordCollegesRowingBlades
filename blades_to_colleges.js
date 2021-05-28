@@ -28,7 +28,7 @@ function init(){
     'Hertford', 'Hertford M1', 'Hertford W1', 'Jesus', 'Keble', 'Lady Margaret Hall', 'Linacre', 'Lincoln', 
     'Lincoln 1st VIII', 'Magdalen', 'Mansfield', 'Merton', 'New College', 'Oriel', 'Oriel M1', 'Oriel W1', 
     'Osler', 'Pembroke', 'Queens', "Regent's Park", 'Somerville', "St. Anne's", "St. Antony's", "St. Benet's Hall", 
-    "St. Caterine's", "St. Caterine's M1", "St. Caterine's W1", 'St. Edmond Hall', "St. Hilda's", "St. Hugh's", 
+    "St. Catherine's", "St. Catherine's M1", "St. Catherine's W1", 'St. Edmond Hall', "St. Hilda's", "St. Hugh's", 
     "St. John's", "St. Peter's", 'St. Peters Bis', 'Trinity', 'University', 'Wadham', 'Wolfson', 'Wolfson M2', 
     'Worcester Men', 'Worcester Women'];
 
